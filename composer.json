@@ -1,0 +1,32 @@
+{
+  "name": "piotrpress/wordpress-installer",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "description": "This composer plugin sets installation paths for WordPress core, plugins, mu-plugins, themes and drop-ins outside of vendor directory.",
+  "homepage": "https://github.com/PiotrPress/wordpress-installer",
+  "authors": [
+    {
+      "name": "Piotr Niewiadomski",
+      "homepage": "https://piotr.press"
+    }
+  ],
+  "keywords": [
+    "wordpress", "wordpress-core", "wordpress-theme", "wordpress-plugin", "wordpress-themes", "wordpress-plugins", "wordpress-muplugin", "wordpress-dropin", "composer", "installer", "composer-plugin", "composer-installer"
+  ],
+  "require": {
+    "php": ">=7.4",
+    "composer-plugin-api": "^2.0"
+  },
+  "extra": {
+    "class": "PiotrPress\\Composer\\WordPress\\Installer\\Plugin",
+    "plugin-modifies-install-path": true
+  },
+  "autoload": {
+    "psr-4": {
+      "PiotrPress\\Composer\\WordPress\\Installer\\": "src/"
+    },
+    "classmap": [
+      "src"
+    ]
+  }
+}
